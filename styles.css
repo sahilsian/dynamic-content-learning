@@ -1,0 +1,153 @@
+body {
+    margin: 0;
+}
+#screen-wrapper {
+    width: 100vw;
+    height: 100vh;
+    background-color: #34495E;
+}
+/* #f4f5f7 */
+#ipad-rectangle {
+    width: 82vw;
+    height: 82vh;
+    background-color: #000000;
+    border-radius: 50px;
+    margin: auto;
+    position: relative;
+    top: 9vh;
+    display: flex;
+    box-shadow: 1px 2px 10px #000000;
+}
+
+#ipad-top {
+    flex: 0.5;
+    border-radius: 50px 0px 0px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #f4f5f7;
+
+}
+/* #f4f5f7 */
+#ipad-screen {
+    background-color: black;
+    border: 1.5px solid #D5DBDB;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    transition: background-color 0.5s ease;
+    /* Transition Fix */
+}
+
+#screen-border {
+    flex:3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 20px solid #f4f5f7;
+    border-bottom: 20px solid #f4f5f7;
+    box-sizing: border-box;
+}
+
+#ipad-bottom {
+    flex: 0.5;
+    border-radius: 0px 50px 50px 0px;
+    background-color: #f4f5f7;
+}
+
+#ipad-speaker {
+    width: 2px;
+    height: 100px;
+    background-color: black;
+}
+
+#ipad-camera {
+    width: 8px;
+    height: 8px;
+    background-color: black;
+    margin: 5px;
+    border-radius: 8px;
+}
+
+#ipad-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#ipad-button {
+    width: 4em;
+    height: 4em;
+    border: 0.5px solid #AAB7B8;
+    border-radius: 5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#ipad-square {
+    width: 1.6em;
+    height: 1.6em;
+    border: 1px solid #AAB7B8;
+    border-radius: 0.3em;
+    
+}
+
+#button-menu {
+    display: flex;
+    flex-direction: column;
+    flex: 3;
+    justify-content: center;
+    align-items: center;
+}
+
+#main-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    font-family: 'Covered By Your Grace', cursive;
+    font-size: 4em;
+    font-weight: bold;
+}
+
+#header-space {
+    width: 100%;
+    height: 100px;
+}
+
+#nickname-input {
+    width: 120%;
+    height: 40px;
+    background-color: #e9edf2;
+    align-items: center;
+    border: 2px solid #0047a0;
+    border-radius: 20px;
+    text-align: center;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+#call-to-action {
+    background-color: #0047a0;
+    width: 100%;
+    height: 40px;
+    margin: 10px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+#call-to-action:hover {
+    background-color: #0f62c7;
+}
+
+#nickname-input:hover {
+    border-color: #0f62c7;
+}
