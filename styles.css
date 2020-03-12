@@ -5,6 +5,7 @@ body {
     width: 100vw;
     height: 100vh;
     background-color: #34495E;
+    transition-delay: all 0.5s linear;
 }
 /* #f4f5f7 */
 #ipad-rectangle {
@@ -27,11 +28,12 @@ body {
     align-items: center;
     flex-direction: column;
     background-color: #f4f5f7;
+    transition: width 0.5s;
 
 }
 /* #f4f5f7 */
 #ipad-screen {
-    background-color: black;
+    background-color: black;transition: backgroundColor 0.5s linear;
     border: 1.5px solid #D5DBDB;
     display: none;
     flex-direction: column;
@@ -39,7 +41,7 @@ body {
     flex-direction: column;
     width: 100%;
     height: 100%;
-    transition: background-color 0.5s ease;
+    
     /* Transition Fix */
 }
 
@@ -51,12 +53,14 @@ body {
     border-top: 20px solid #f4f5f7;
     border-bottom: 20px solid #f4f5f7;
     box-sizing: border-box;
+    transition-delay: all 0.5s ease;
 }
 
 #ipad-bottom {
     flex: 0.5;
     border-radius: 0px 50px 50px 0px;
     background-color: #f4f5f7;
+    transition-delay: all 0.5s ease;
 }
 
 #ipad-speaker {
