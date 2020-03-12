@@ -1,6 +1,5 @@
 var click_state = false;
 var text_state = false;
-var nick_state = false;
 
 function screenOn() {
     if (click_state === false){
@@ -24,18 +23,21 @@ function checkInput() {
             let alert = document.createElement("p")
             
             alert.innerHTML = "Please enter a Nickname"
-            alert.innerText.fontcolor = "#ff0000"
+            alert.style.color = "#ff0000"
+            alert.style.position = "sticky";
             console.log(alert)
 
             document.getElementById("button-menu").appendChild(alert)
             text_state = true;
+    } else {
+            var ipadTop = document.getElementById("ipad-top");
+            ipadTop.style.display = "none"
+            var ipadBot = document.getElementById("ipad-bottom")
+            ipadBot.style.display = "none"
+            var ipadBorder = document.getElementById("screen-border")
+            ipadBorder.style.borderTop = "0px";
+            ipadBorder.style.borderBottom = "0px";
+            console.log("hi");
+
     }
-}
-
-
-function nickname_interaction() {
-    if (nick_state === false) {
-    document.querySelector("#nickname-input").style.width = "100%";
-    nick_state === true;
-}
 }
