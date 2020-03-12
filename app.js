@@ -1,5 +1,6 @@
 var click_state = false;
 var text_state = false;
+var nick_state = false;
 
 function screenOn() {
     if (click_state === false){
@@ -29,4 +30,12 @@ function checkInput() {
             document.getElementById("button-menu").appendChild(alert)
             text_state = true;
     }
+}
+
+
+function nickname_interaction() {
+    if (nick_state === false) {
+    document.querySelector("#nickname-input").style.width = "100%";
+    nick_state === true;
+}
 }

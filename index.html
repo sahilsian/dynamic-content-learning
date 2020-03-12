@@ -51,7 +51,8 @@ Landing Page
                         </div>
 
                         <div id="button-menu">
-                            <input id="nickname-input" class="w3-input w3-animate-input" style="width:80%" type="text" placeholder="Enter a Nickname...">
+                            <input id="nickname-input" type="text" placeholder="Enter a Nickname..."
+                            onclick="nickname_interaction()" onmouseover="nickname_interaction()">
                             <div id="call-to-action" onclick="nextScreen()">
                                 <span>LETS GET STARTED!</span>
                             </div>
@@ -60,8 +61,10 @@ Landing Page
                 </div>
 
                 <div id="ipad-bottom">
-                    <div id="ipad-button" onclick="screenOn()">
+                    <div class=cirrcle>
+                        <div id="ipad-button" onclick="screenOn()">
                         <div id="ipad-square"></div>
+                    </div>
                     </div>
                 </div>
             </div>
