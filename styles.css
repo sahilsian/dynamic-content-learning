@@ -94,11 +94,25 @@ body {
 }
 
 #ipad-button {
-    border: 0.5px solid #AAB7B8;
-    border-radius: 5em;
+    position:absolute;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.cirrcle {
+    -webkit-border-radius: 5em 5em;
+    border-radius: 5em/5em;;
+    border:1px solid #cd2e3a;
+    width:4em;
+    height:4em;
+    outline:none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-animation-name: greenPulse;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
 }
 
 
@@ -135,7 +149,7 @@ body {
 }
 
 #nickname-input {
-    width: 120%;
+    width: 80%;
     height: 40px;
     background-color: #e9edf2;
     align-items: center;
@@ -143,6 +157,7 @@ body {
     border-radius: 20px;
     text-align: center;
     font-family: 'Noto Sans KR', sans-serif;
+    transition: width 0.3s;
 }
 
 #call-to-action {
