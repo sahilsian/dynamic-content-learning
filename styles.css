@@ -2,20 +2,20 @@ body {
     margin: 0;
 }
 #screen-wrapper {
-    display:flex;
-    justify-content: center;
-    align-items:center;
     width: 100vw;
     height: 100vh;
     background-color: #34495E;
+    transition-delay: all 0.5s linear;
 }
 /* #f4f5f7 */
 #ipad-rectangle {
-    width: 95%;
-    height: 90%;
+    width: 82vw;
+    height: 82vh;
     background-color: #000000;
     border-radius: 50px;
+    margin: auto;
     position: relative;
+    top: 9vh;
     display: flex;
     box-shadow: 1px 2px 10px #000000;
 }
@@ -28,11 +28,12 @@ body {
     align-items: center;
     flex-direction: column;
     background-color: #f4f5f7;
+    transition: width 0.5s;
 
 }
 /* #f4f5f7 */
 #ipad-screen {
-    background-color: black;
+    background-color: black;transition: backgroundColor 0.5s linear;
     border: 1.5px solid #D5DBDB;
     display: none;
     flex-direction: column;
@@ -40,7 +41,7 @@ body {
     flex-direction: column;
     width: 100%;
     height: 100%;
-    transition: background-color 0.5s ease;
+    
     /* Transition Fix */
 }
 
@@ -52,12 +53,14 @@ body {
     border-top: 20px solid #f4f5f7;
     border-bottom: 20px solid #f4f5f7;
     box-sizing: border-box;
+    transition-delay: all 0.5s ease;
 }
 
 #ipad-bottom {
     flex: 0.5;
     border-radius: 0px 50px 50px 0px;
     background-color: #f4f5f7;
+    transition-delay: all 0.5s ease;
 }
 
 #ipad-speaker {
@@ -79,38 +82,23 @@ body {
     justify-content: center;
     align-items: center;
 }
-
 @-webkit-keyframes greenPulse {
     from { -webkit-box-shadow: 0 0 1px #cd2e3a; }
     50% {  -webkit-box-shadow: 0 0 18px #cd2e3a; }
     to {-webkit-box-shadow: 0 0 9px #cd2e3a; }
-    }
+   }
     
 .cirrcle {
     width: 4em;
     height: 4em;
 }
 
-div#ipad-button {
-    position: absolute;
+#ipad-button {
+    border: 0.5px solid #AAB7B8;
+    border-radius: 5em;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.cirrcle {
-    -webkit-border-radius: 5em 5em;
-    border-radius: 5em/5em;;
-    border:1px solid #cd2e3a;
-    width:4em;
-    height:4em;
-    outline:none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    -webkit-animation-name: greenPulse;
-    -webkit-animation-duration: 2s;
-    -webkit-animation-iteration-count: infinite;
 }
 
 
@@ -147,7 +135,7 @@ div#ipad-button {
 }
 
 #nickname-input {
-    width: 80%;
+    width: 120%;
     height: 40px;
     background-color: #e9edf2;
     align-items: center;
@@ -155,7 +143,6 @@ div#ipad-button {
     border-radius: 20px;
     text-align: center;
     font-family: 'Noto Sans KR', sans-serif;
-    transition: width 0.3s;
 }
 
 #call-to-action {
