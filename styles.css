@@ -123,6 +123,7 @@ div#ipad-button {
 }
 
 #button-menu {
+    
     display: flex;
     flex-direction: column;
     flex: 3;
