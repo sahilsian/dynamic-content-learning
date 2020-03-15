@@ -15,6 +15,9 @@ function nextScreen() {
     checkInput();
 }
 
+function ExpandHeight() {
+    document.querySelector("#nickname-input").style.width = "100%";
+}
 
 function checkInput() {
     var inputfield = document.getElementById("nickname-input").value;

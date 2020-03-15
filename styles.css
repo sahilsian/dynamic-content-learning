@@ -140,8 +140,15 @@ body {
     align-items: center;
     flex: 1;
     font-family: 'Covered By Your Grace', cursive;
-    font-size: 4em;
     font-weight: bold;
+}
+
+#title-1 {
+    font-size: 6em;
+}
+
+#title-2 {
+    font-size: 4em;
 }
 
 #header-space {
