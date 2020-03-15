@@ -20,14 +20,13 @@ function checkInput() {
     var inputfield = document.getElementById("nickname-input").value;
 
     if (inputfield === "" && text_state === false) {
-            let alert = document.createElement("p")
+            let alert = document.getElementById("nickname_alert");
             
-            alert.innerHTML = "Please enter a Nickname"
-            alert.style.color = "#ff0000"
+            alert.innerText = "Please enter a Nickname";
+            alert.style.color = "#ff0000";
             alert.style.position = "sticky";
             console.log(alert)
 
-            document.getElementById("button-menu").appendChild(alert)
             text_state = true;
     } else {
             var ipadTop = document.getElementById("ipad-top");
@@ -41,3 +40,5 @@ function checkInput() {
 
     }
 }
+
+
