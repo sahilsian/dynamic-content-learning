@@ -160,6 +160,10 @@ body {
     transition: width 0.3s;
 }
 
+#nickname_alert {
+    height:15px;
+}
+
 #call-to-action {
     background-color: #0047a0;
     width: 100%;
