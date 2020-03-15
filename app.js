@@ -42,7 +42,6 @@ function checkInput() {
             ipadRec.style.width = "100vw";
             ipadRec.style.height = "100vh";
             ipadRec.style.boxShadow = "none";
-            ipadRec.style.position = "absolute";
             ipadRec.style.top = "0";
             var screenWrapper = document.getElementById("screen-wrapper");
             screenWrapper.style.width = "100vw";
