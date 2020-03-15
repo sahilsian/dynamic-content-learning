@@ -26,8 +26,6 @@ function checkInput() {
             alert.style.color = "#ff0000";
             alert.style.position = "sticky";
             console.log(alert)
-
-            text_state = true;
     } else {
             var ipadTop = document.getElementById("ipad-top");
             ipadTop.style.display = "none"
@@ -37,8 +35,15 @@ function checkInput() {
             ipadBorder.style.borderTop = "0px";
             ipadBorder.style.borderBottom = "0px";
             console.log("hi");
+            var ipadRec = document.getElementById("ipad-rectangle");
+            ipadRec.style.width = "100vw";
+            ipadRec.style.height = "100vh";
+            ipadRec.style.boxShadow = "none";
+            ipadRec.style.position = "absolute";
+            ipadRec.style.top = "0";
             var screenWrapper = document.getElementById("screen-wrapper");
-            screenWrapper.style.display = none;
+            screenWrapper.style.width = "100vw";
+            screenWrapper.style.height = "100vh";
 
     }
 }

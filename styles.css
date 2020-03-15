@@ -7,6 +7,7 @@ body {
     background-color: #34495E;
     transition-delay: all 0.5s linear;
     display: block;
+    position: relative;
 }
 /* #f4f5f7 */
 #ipad-rectangle {
