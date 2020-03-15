@@ -1,11 +1,14 @@
 var click_state = false;
 var text_state = false;
 
+
+
 function screenOn() {
     if (click_state === false){
         click_state = true;
         document.querySelector("#ipad-screen").style.display = "flex";
         document.querySelector("#ipad-screen").style.backgroundColor = "white";
+        document.querySelector("#title-1").innerText = 
     } else {
         click_state = true;
     }
