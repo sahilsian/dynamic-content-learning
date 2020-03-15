@@ -38,6 +38,8 @@ function checkInput() {
             ipadBorder.style.borderTop = "0px";
             ipadBorder.style.borderBottom = "0px";
             console.log("hi");
+            var screenWrapper = document.getElementById("screen-wrapper");
+            screenWrapper.style.display = none;
 
     }
 }
