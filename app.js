@@ -1,6 +1,8 @@
 var click_state = false;
 var text_state = false;
 
+
+
 function screenOn() {
     if (click_state === false){
         click_state = true;
