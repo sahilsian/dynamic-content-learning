@@ -1,14 +1,22 @@
 var click_state = false;
 var text_state = false;
 
+//var dataset;
 
+/*fetch("pageinfo.json")
+    .then(response => response.json())
+    .then(data => dataset = data)
+    .then(json => {
+        console.log(json);
+
+        
+    });*/
 
 function screenOn() {
     if (click_state === false){
         click_state = true;
         document.querySelector("#ipad-screen").style.display = "flex";
         document.querySelector("#ipad-screen").style.backgroundColor = "white";
-        document.querySelector("#title-1").innerText = 
     } else {
         click_state = true;
     }
@@ -52,5 +60,4 @@ function checkInput() {
 
     }
 }
-
 
