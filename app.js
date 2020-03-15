@@ -1,6 +1,7 @@
 var click_state = false;
 var text_state = false;
 
+
 //var dataset;
 
 /*fetch("pageinfo.json")
@@ -12,15 +13,32 @@ var text_state = false;
         
     });*/
 
+var PageInfo = {
+    "page1" : {
+        "title" : "TAEKWONDO LOGIC:",
+        "title2" : "defend yourself",
+        "direction" : "column"
+    }
+}
+
+
 function screenOn() {
     if (click_state === false){
         click_state = true;
+        /*
         document.querySelector("#ipad-screen").style.display = "flex";
+
         document.querySelector("#ipad-screen").style.backgroundColor = "white";
+
+        document.querySelector("#ipad-screen").style.backgroundColor = "white";*/
+        document.querySelector("#title-1").innerText = PageInfo.page1.title;
+        document.querySelector("#title-2").innerText = PageInfo.page1.title2;
+
     } else {
         click_state = true;
     }
 }
+
 
 function nextScreen() {
     checkInput();
