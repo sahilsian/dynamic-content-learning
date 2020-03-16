@@ -1,5 +1,6 @@
 var click_state = false;
 var text_state = false;
+var game_running = false;
 
 
 //var dataset;
@@ -75,7 +76,18 @@ function checkInput() {
             var screenWrapper = document.getElementById("screen-wrapper");
             screenWrapper.style.width = "100vw";
             screenWrapper.style.height = "100vh";
-
+            game_running = true;
+            gameController()
     }
 }
 
+/*
+function gameController() {
+    let headerSpace = document.getElementById("header-space");
+    headerSpace.style.backgroundColor = "#FAD"
+    let title
+
+    
+}
+
+*/
