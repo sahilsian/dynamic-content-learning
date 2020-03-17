@@ -63,6 +63,9 @@ function ipadGrow() {
         var screenWrapper = document.getElementById("screen-wrapper");
             screenWrapper.style.width = "100vw";
             screenWrapper.style.height = "100vh";
+
+        //var headerTitle = document.getElementById("header-title");
+            //headerTitle.style.display = "block";
 }
 
 function checkInput() {
