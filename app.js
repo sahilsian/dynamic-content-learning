@@ -2,7 +2,6 @@ var click_state = false;
 var text_state = false;
 var game_running = false;
 
-
 //var dataset;
 
 /*fetch("pageinfo.json")
@@ -10,8 +9,6 @@ var game_running = false;
     .then(data => dataset = data)
     .then(json => {
         console.log(json);
-
-        
     });*/
 
 var PageInfo = {
@@ -44,7 +41,6 @@ function screenOn() {
 function nextScreen() {
     checkInput();
 }
-
 
 
 function ipadGrow() {
@@ -83,8 +79,24 @@ function checkInput() {
             ipadGrow();
 
             game_running = true;
-            flexController()
+            flexController();
+            ChangeButton();
+
     }
+}
+
+function ChangeButton() {
+    document.querySelector("#nickname-input").style.display = "none";
+    document.querySelector("#nickname_alert").style.display = "none";
+    var callToAction = document.querySelector("#call-to-action");
+    callToAction.style.webkitAnimation = "bounce 0s infinite"; 
+    callToAction.innerText = "NEXT";
+    callToAction.style.backgroundColor = "white";
+    callToAction.style.color = "grey";
+    callToAction.style.height = "80px";
+    callToAction.style.fontSize = "30px";
+
+   
 }
 
 
@@ -92,7 +104,7 @@ function flexController() {
     var leftFlex = document.querySelector("#mainbox1")
     var middleFlex = document.querySelector("#mainbox2")
     var rightFlex = document.querySelector("#mainbox3") 
-
+}
 
 
  // Button toggle
@@ -118,5 +130,4 @@ function togglebutton() {
     } else {
         return null;
     }  
-}
 }

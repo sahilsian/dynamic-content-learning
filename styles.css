@@ -313,6 +313,10 @@ body {
 
 /* header2 toggle button */
 
+div#header-container {
+    display:none;
+}
+
 #header2 {
     padding: 10px;
     text-align:center;
