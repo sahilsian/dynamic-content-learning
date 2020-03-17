@@ -1,0 +1,74 @@
+<!--  
+ ___  ___   _________   _____ ______    ___          
+|\  \|\  \ |\___   ___\|\   _ \  _   \ |\  \         
+\ \  \\\  \\|___ \  \_|\ \  \\\__\ \  \\ \  \        
+ \ \   __  \    \ \  \  \ \  \\|__| \  \\ \  \       
+  \ \  \ \  \    \ \  \  \ \  \    \ \  \\ \  \____  
+   \ \__\ \__\    \ \__\  \ \__\    \ \__\\ \_______\
+    \|__|\|__|     \|__|   \|__|     \|__| \|_______|
+
+Contents
+
+Landing Page
+
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">     
+        <meta name="keywords" content="HTML, CSS, XML, JavaScript">
+        <meta name="IDSP-Team-2020" content="Dynamic Content Design, Gaeun Park, Sahil Sian, Jiho Ryu">
+        <!-- Sets Viewport for Mobile Viewing -->
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!-- Icon Library --> <!-- Roboto Type Font -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Covered+By+Your+Grace|Noto+Sans+KR&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <title>Taekwondo: Defend Yourself</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+
+<!-- INITIAL MENU COMPONENT -->
+        <!-- Ipad Screen -->
+        <div id="screen-wrapper">
+            <div id="ipad-rectangle">
+
+                <div id="ipad-top">
+                    <div id="ipad-speaker"></div>
+                    <div id="ipad-camera"></div>
+                </div>
+
+                <!-- Menu Contents -->
+                <div id="screen-border">
+                    <div id="ipad-screen">
+                        <div id="header-space"></div>
+                        <div id="main-title">
+                            <span id="title-1">TAEKWONDO:</span>
+                            <span id="title-2">DEFEND YOURSELF</span>
+                        </div>
+
+                        <div id="button-menu">
+                            <input id="nickname-input" type="text" placeholder="Enter a Nickname..."
+                            onclick="nickname_interaction()" onmouseover="nickname_interaction()">
+                            <div id="call-to-action" onclick="nextScreen()">
+                                <span>LETS GET STARTED!</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="ipad-bottom">
+                    <div class=cirrcle>
+                        <div id="ipad-button" onclick="screenOn()">
+                        <div id="ipad-square"></div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="app.js"></script>
+    </body>
+</html>
