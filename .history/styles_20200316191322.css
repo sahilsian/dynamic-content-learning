@@ -368,19 +368,11 @@ div#header-container {
 
 
 
-
-/* New Toggle */
-
-.button-section {
-    margin: 50px;
-    text-align:center;
-}
-
 .switch {
     position: relative;
     display: inline-block;
-    width: 150px;
-    height: 50px;
+    width: 90px;
+    height: 34px;
   }
   
   .switch input {display:none;}
@@ -394,13 +386,10 @@ div#header-container {
     bottom: 0;
     background-color: #ca2222;
     -webkit-transition: .4s;
-    /* transition: .4s; */
-    cursor: pointer;
-    transition: all 500ms ease-in-out;
+    transition: .4s;
   }
   
   .slider:before {
-    margin: 8px;
     position: absolute;
     content: "";
     height: 26px;
@@ -421,17 +410,18 @@ div#header-container {
   }
   
   input:checked + .slider:before {
-    -webkit-transform: translateX(100px);
-    -ms-transform: translateX(100px);
-    transform: translateX(100px);
+    -webkit-transform: translateX(55px);
+    -ms-transform: translateX(55px);
+    transform: translateX(55px);
   }
   
-  .s1
+  /*------ ADDED CSS ---------*/
+  .on
   {
     display: none;
   }
   
-  .s1, .s2
+  .on, .off
   {
     color: white;
     position: absolute;
@@ -442,19 +432,18 @@ div#header-container {
     font-family: Verdana, sans-serif;
   }
   
-  input:checked+ .slider .s1
+  input:checked+ .slider .on
   {display: block;}
   
-  input:checked + .slider .s2
+  input:checked + .slider .off
   {display: none;}
   
 
 /* Rounded sliders */
 
-.slider.round {
+  .slider.round {
     border-radius: 34px;
-}
+  }
   
-.slider.round:before {
-    border-radius: 50%;
-}
+  .slider.round:before {
+    border-radius: 50%;}
