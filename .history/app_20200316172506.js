@@ -93,6 +93,7 @@ function flexController() {
     var middleFlex = document.querySelector("#mainbox2")
     var rightFlex = document.querySelector("#mainbox3") 
 
+<<<<<<< HEAD
 */
 
 
@@ -108,6 +109,7 @@ function togglebutton() {
     else {
         btn.textContent = "S1";
 }
+=======
     if (middleFlex.style.flex = "50") {
         middleFlex.style.flex = "1";
         leftFlex.style.flex = "50";
@@ -120,3 +122,4 @@ function togglebutton() {
         return null;
     }  
 }
+>>>>>>> 80e2363a1b32f69c13780c54c5826fa48d0edb9d
