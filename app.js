@@ -26,12 +26,8 @@ var PageInfo = {
 function screenOn() {
     if (click_state === false){
         click_state = true;
-        /*
         document.querySelector("#ipad-screen").style.display = "flex";
-
         document.querySelector("#ipad-screen").style.backgroundColor = "white";
-
-        document.querySelector("#ipad-screen").style.backgroundColor = "white";*/
         document.querySelector("#title-1").innerText = PageInfo.page1.title;
         document.querySelector("#title-2").innerText = PageInfo.page1.title2;
 
@@ -45,9 +41,7 @@ function nextScreen() {
     checkInput();
 }
 
-function ExpandHeight() {
-    document.querySelector("#nickname-input").style.width = "100%";
-}
+
 
 function checkInput() {
     var inputfield = document.getElementById("nickname-input").value;

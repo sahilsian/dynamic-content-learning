@@ -35,14 +35,10 @@ body {
 }
 /* #f4f5f7 */
 #ipad-screen {
-   /* background-color: black;  
-      display: none;
-                         will apply later */
-    display: flex;
-    background-color:white;
+    background-color: black;  
+    display: none;
     transition: backgroundColor 0.5s linear;
     border: 1.5px solid #D5DBDB;
-
     flex-direction: column;
     align-items: center;
     flex-direction: column;
@@ -172,6 +168,21 @@ body {
     align-items: center;
     justify-content: center;
     color: white;
+    animation: bounce 2s infinite;
+	-webkit-animation: bounce 2s infinite;
+}
+
+ 
+@-webkit-keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0);}	
+	40% {-webkit-transform: translateY(-30px);}
+	60% {-webkit-transform: translateY(-15px);}
+}
+
+@keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+	40% {transform: translateY(-10px);}
+	60% {transform: translateY(-10px);}
 }
 
 #lowerbox-right {
