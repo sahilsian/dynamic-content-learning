@@ -2,6 +2,7 @@ var click_state = false;
 var text_state = false;
 var game_running = false;
 
+
 //var dataset;
 
 /*fetch("pageinfo.json")
@@ -9,6 +10,8 @@ var game_running = false;
     .then(data => dataset = data)
     .then(json => {
         console.log(json);
+
+        
     });*/
 
 var PageInfo = {
@@ -43,6 +46,7 @@ function nextScreen() {
 }
 
 
+
 function ipadGrow() {
     var ipadTop = document.getElementById("ipad-top");
             ipadTop.style.display = "none"
@@ -63,9 +67,6 @@ function ipadGrow() {
         var screenWrapper = document.getElementById("screen-wrapper");
             screenWrapper.style.width = "100vw";
             screenWrapper.style.height = "100vh";
-
-        //var headerTitle = document.getElementById("header-title");
-            //headerTitle.style.display = "block";
 }
 
 function checkInput() {
@@ -82,55 +83,17 @@ function checkInput() {
             ipadGrow();
 
             game_running = true;
-            document.querySelector("#header-container").style.display = "flex";
-            document.querySelector("#title-1").innerText = "";
-            document.querySelector("#title-2").innerText = "";
-
-            flexController();
-            ChangeButton();
+            flexController()
     }
-}
-
-function ChangeButton() {
-    document.querySelector("#nickname-input").style.display = "none";
-    document.querySelector("#nickname_alert").style.display = "none";
-
-    var callToAction = document.querySelector("#call-to-action");
-    callToAction.style.webkitAnimation = "bounce 0s infinite"; 
-    callToAction.innerText = "NEXT";
-    callToAction.style.backgroundColor = "white";
-    callToAction.style.color = "grey";
-    callToAction.style.height = "80px";
-    callToAction.style.fontSize = "30px";
-
-   
 }
 
 
 function flexController() {
-    var leftFlex = document.querySelector("#mainbox1");
-    var middleFlex = document.querySelector("#mainbox2");
-    var rightFlex = document.querySelector("#mainbox3");
-    
-    leftFlex.style.flex = "50";
-    middleFlex.style.flex = "1";
-    rightFlex.style.flex = "50";
-
-}
+    var leftFlex = document.querySelector("#mainbox1")
+    var middleFlex = document.querySelector("#mainbox2")
+    var rightFlex = document.querySelector("#mainbox3") 
 
 
- // Button toggle
-function togglebutton() {
-    var btn = document.getElementById("togglebutton");
-
-    btn.classList.toggle('btn-toggle-white');
-
-    if (btn.textContent == "S1") {
-        btn.textContent = "S2";
-    }
-    else {
-        btn.textContent = "S1";
-}
     if (middleFlex.style.flex = "50") {
         middleFlex.style.flex = "1";
         leftFlex.style.flex = "50";
@@ -143,3 +106,21 @@ function togglebutton() {
         return null;
     }  
 }
+
+
+
+ // Button toggle
+ function togglebutton() {
+    // Button toggle
+    var btn = document.getElementById("togglebutton");
+
+    btn.classList.toggle('btn-toggle-white');
+
+    if (btn.textContent == "S1") {
+        btn.textContent = "S2";
+    }
+    else {
+        btn.textContent = "S1";
+    }
+
+ }
