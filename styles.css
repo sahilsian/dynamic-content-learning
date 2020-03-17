@@ -22,10 +22,6 @@ body {
     transition: width 0.3s;
 }
 
-div#header-container {
-    display: none;
-}
-
 #ipad-top {
     flex: 0.5;
     border-radius: 50px 0px 0px 50px;
@@ -173,7 +169,7 @@ div#header-container {
     justify-content: center;
     color: white;
     animation: bounce 2s infinite;
-    -webkit-animation: bounce 0s infinite;
+	-webkit-animation: bounce 2s infinite;
 }
 
  
@@ -221,58 +217,6 @@ div#header-container {
     width: 100%;
     height: 100%;
 }
-
-
-.content1-left {
-    float: left;
-    width: 50%;
-    text-align: center;
-}
-    
-
-    
-.content1-right {
-    float: right;
-    width: 50%;
-    text-align: center;
-}
-    
-    
-.contents1-textbox {
-    background-color: navy;
-    color: white;
-    text-align: center;
-    font-size: large;
-    border-radius: 30px;
-    height: 40px;
-    margin:auto;
-    width:70%;
-    padding:10px;
-    }
-    
-.contents1-textbox-label {
-   vertical-align:middle;
-}
-    
-.contents1-image {
-    padding: 20px;
-    margin-left: 130px;
-    width: auto;
-    height: auto;
-}
-    
-img{
-    height: 300px;
-}
-    
-.subject-section {
-    height: 60px;
-    width: 100%;
-    /* background-color: black; */
-    color: white;
-    text-align: center;
-    font-size: xx-large;
-    padding: 10px;}
 
 #mainbox1-content {
     background-color: #F2F2BC;
@@ -367,18 +311,20 @@ img{
 }
 
 
-/* header2 toggle button
 
-div#header-container {
-    display:none;
-}
+/* header2 toggle button */
 
-#header2 {
+/* #header2 {
     padding: 10px;
     text-align:center;
 }
 
-#next-header2-section {
+.button-section {
+    padding: 10px;
+    text-align:center;
+}
+
+.next-button-section {
     padding: 10px;
     text-align: center;
 }
@@ -392,6 +338,10 @@ div#header-container {
     background-color: red;
     border: solid 2px red;
     border-radius: 30px;
+
+    transition-property: color;
+    transition-duration: 0.5s;
+
 }
 
 .btn-toggle-white {
@@ -404,6 +354,9 @@ div#header-container {
     background-color: white;
     border: solid 1px black;
     border-radius: 30px;
+    transition-property: background-color;
+    transition-duration: 0.3s;
+    
 }
 
 .btn-toggle-white-test {
@@ -420,19 +373,19 @@ div#header-container {
 
 
 
+/* Toggle 2  */
 
-/* New Toggle */
-
-.button-section {
-    margin: 50px;
+#header2 {
+    padding: 10px;
     text-align:center;
 }
 
 .switch {
     position: relative;
     display: inline-block;
-    width: 150px;
-    height: 50px;
+    width: 90px;
+    height: 34px;
+    
   }
   
   .switch input {display:none;}
@@ -446,13 +399,10 @@ div#header-container {
     bottom: 0;
     background-color: #ca2222;
     -webkit-transition: .4s;
-    /* transition: .4s; */
-    cursor: pointer;
-    transition: all 500ms ease-in-out;
+    transition: .4s;
   }
   
   .slider:before {
-    margin: 8px;
     position: absolute;
     content: "";
     height: 26px;
@@ -473,9 +423,9 @@ div#header-container {
   }
   
   input:checked + .slider:before {
-    -webkit-transform: translateX(100px);
-    -ms-transform: translateX(100px);
-    transform: translateX(100px);
+    -webkit-transform: translateX(55px);
+    -ms-transform: translateX(55px);
+    transform: translateX(55px);
   }
   
   .s1
@@ -500,13 +450,11 @@ div#header-container {
   input:checked + .slider .s2
   {display: none;}
   
-
-/* Rounded sliders */
-
-.slider.round {
-    border-radius: 34px;
-}
   
-.slider.round:before {
-    border-radius: 50%;
-}
+/* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;}
