@@ -366,21 +366,13 @@ div#header-container {
     border-radius: 30px;
 } */
 
-
-
-
 /* New Toggle */
-
-.button-section {
-    margin: 50px;
-    text-align:center;
-}
 
 .switch {
     position: relative;
     display: inline-block;
-    width: 150px;
-    height: 50px;
+    width: 90px;
+    height: 34px;
   }
   
   .switch input {display:none;}
@@ -394,13 +386,10 @@ div#header-container {
     bottom: 0;
     background-color: #ca2222;
     -webkit-transition: .4s;
-    /* transition: .4s; */
-    cursor: pointer;
-    transition: all 500ms ease-in-out;
+    transition: .4s;
   }
   
   .slider:before {
-    margin: 8px;
     position: absolute;
     content: "";
     height: 26px;
@@ -421,9 +410,9 @@ div#header-container {
   }
   
   input:checked + .slider:before {
-    -webkit-transform: translateX(100px);
-    -ms-transform: translateX(100px);
-    transform: translateX(100px);
+    -webkit-transform: translateX(55px);
+    -ms-transform: translateX(55px);
+    transform: translateX(55px);
   }
   
   .s1
