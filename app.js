@@ -19,6 +19,10 @@ var PageInfo = {
         "title" : "TAEKWONDO LOGIC:",
         "title2" : "defend yourself",
         "direction" : "column"
+    },
+
+    "page2" : {
+        "title" : ""
     }
 }
 
@@ -43,6 +47,28 @@ function nextScreen() {
 
 
 
+function ipadGrow() {
+    var ipadTop = document.getElementById("ipad-top");
+            ipadTop.style.display = "none"
+
+        var ipadBot = document.getElementById("ipad-bottom")
+            ipadBot.style.display = "none"
+
+        var ipadBorder = document.getElementById("screen-border")
+            ipadBorder.style.borderTop = "0px";
+            ipadBorder.style.borderBottom = "0px";
+
+        var ipadRec = document.getElementById("ipad-rectangle");
+            ipadRec.style.width = "100vw";
+            ipadRec.style.height = "100vh";
+            ipadRec.style.boxShadow = "none";
+            ipadRec.style.top = "0";
+
+        var screenWrapper = document.getElementById("screen-wrapper");
+            screenWrapper.style.width = "100vw";
+            screenWrapper.style.height = "100vh";
+}
+
 function checkInput() {
     var inputfield = document.getElementById("nickname-input").value;
 
@@ -54,34 +80,28 @@ function checkInput() {
             alert.style.position = "sticky";
             console.log(alert)
     } else {
-            var ipadTop = document.getElementById("ipad-top");
-            ipadTop.style.display = "none"
-            var ipadBot = document.getElementById("ipad-bottom")
-            ipadBot.style.display = "none"
-            var ipadBorder = document.getElementById("screen-border")
-            ipadBorder.style.borderTop = "0px";
-            ipadBorder.style.borderBottom = "0px";
-            console.log("hi");
-            var ipadRec = document.getElementById("ipad-rectangle");
-            ipadRec.style.width = "100vw";
-            ipadRec.style.height = "100vh";
-            ipadRec.style.boxShadow = "none";
-            ipadRec.style.top = "0";
-            var screenWrapper = document.getElementById("screen-wrapper");
-            screenWrapper.style.width = "100vw";
-            screenWrapper.style.height = "100vh";
+            ipadGrow();
+
             game_running = true;
-            gameController()
+            flexController()
     }
 }
 
-/*
-function gameController() {
-    let headerSpace = document.getElementById("header-space");
-    headerSpace.style.backgroundColor = "#FAD"
-    let title
 
-    
+function flexController() {
+    var leftFlex = document.querySelector("#mainbox1")
+    var middleFlex = document.querySelector("#mainbox2")
+    var rightFlex = document.querySelector("#mainbox3")
+
+    if (middleFlex.style.flex = "50") {
+        middleFlex.style.flex = "1";
+        leftFlex.style.flex = "50";
+        rightFlex.style.flex = "50";
+    } else if (middleFlex.style.flex = "1") {
+        middleFlex.style.flex = "50";
+        leftFlex.style.flex = "1";
+        rightFlex.style.flex = "1"
+    } else {
+        return null;
+    }  
 }
-
-*/
