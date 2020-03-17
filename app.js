@@ -82,15 +82,19 @@ function checkInput() {
             ipadGrow();
 
             game_running = true;
+            document.querySelector("#header-container").style.display = "flex";
+            document.querySelector("#title-1").innerText = "";
+            document.querySelector("#title-2").innerText = "";
+
             flexController();
             ChangeButton();
-
     }
 }
 
 function ChangeButton() {
     document.querySelector("#nickname-input").style.display = "none";
     document.querySelector("#nickname_alert").style.display = "none";
+
     var callToAction = document.querySelector("#call-to-action");
     callToAction.style.webkitAnimation = "bounce 0s infinite"; 
     callToAction.innerText = "NEXT";
@@ -104,9 +108,14 @@ function ChangeButton() {
 
 
 function flexController() {
-    var leftFlex = document.querySelector("#mainbox1")
-    var middleFlex = document.querySelector("#mainbox2")
-    var rightFlex = document.querySelector("#mainbox3") 
+    var leftFlex = document.querySelector("#mainbox1");
+    var middleFlex = document.querySelector("#mainbox2");
+    var rightFlex = document.querySelector("#mainbox3");
+    
+    leftFlex.style.flex = "50";
+    middleFlex.style.flex = "1";
+    rightFlex.style.flex = "50";
+
 }
 
 
