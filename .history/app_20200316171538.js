@@ -93,8 +93,8 @@ function gameController() {
 */
 
 
- // Button toggle
 function togglebutton() {
+    // Button toggle
     var btn = document.getElementById("togglebutton");
 
     btn.classList.toggle('btn-toggle-white');
@@ -104,4 +104,4 @@ function togglebutton() {
     }
     else {
         btn.textContent = "S1";
-}
+    }

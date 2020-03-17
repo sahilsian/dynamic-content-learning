@@ -296,12 +296,12 @@ body {
 
 /* header2 toggle button */
 
-#header2 {
+.header2 {
     padding: 10px;
     text-align:center;
 }
 
-#next-header2-section {
+.next-header2-section {
     padding: 10px;
     text-align: center;
 }

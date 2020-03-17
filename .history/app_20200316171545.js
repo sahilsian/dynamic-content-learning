@@ -104,4 +104,4 @@ function togglebutton() {
     }
     else {
         btn.textContent = "S1";
-}
+    }

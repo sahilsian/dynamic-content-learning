@@ -91,17 +91,3 @@ function gameController() {
 }
 
 */
-
-
- // Button toggle
-function togglebutton() {
-    var btn = document.getElementById("togglebutton");
-
-    btn.classList.toggle('btn-toggle-white');
-
-    if (btn.textContent == "S1") {
-        btn.textContent = "S2";
-    }
-    else {
-        btn.textContent = "S1";
-}
