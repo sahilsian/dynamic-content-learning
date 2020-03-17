@@ -1,0 +1,119 @@
+<!--  
+ ___  ___   _________   _____ ______    ___          
+|\  \|\  \ |\___   ___\|\   _ \  _   \ |\  \         
+\ \  \\\  \\|___ \  \_|\ \  \\\__\ \  \\ \  \        
+ \ \   __  \    \ \  \  \ \  \\|__| \  \\ \  \       
+  \ \  \ \  \    \ \  \  \ \  \    \ \  \\ \  \____  
+   \ \__\ \__\    \ \__\  \ \__\    \ \__\\ \_______\
+    \|__|\|__|     \|__|   \|__|     \|__| \|_______|
+
+Contents
+
+Landing Page
+
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">     
+        <meta name="keywords" content="HTML, CSS, XML, JavaScript">
+        <meta name="IDSP-Team-2020" content="Dynamic Content Design, Gaeun Park, Sahil Sian, Jiho Ryu">
+        <!-- Sets Viewport for Mobile Viewing -->
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!-- Icon Library --> <!-- Roboto Type Font -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Covered+By+Your+Grace|Noto+Sans+KR&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <title>Taekwondo: Defend Yourself</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+
+<!-- INITIAL MENU COMPONENT -->
+        <!-- Ipad Screen -->
+        <div id="screen-wrapper">
+            <div id="ipad-rectangle">
+
+                <div id="ipad-top">
+                    <div id="ipad-speaker"></div>
+                    <div id="ipad-camera"></div>
+                </div>
+
+                <!-- Menu Contents -->
+                <div id="screen-border">
+                    <div id="ipad-screen">
+                        <!-- DIV 1  -->
+                        <div id="header-container">
+                            <div id="header1">
+                                Taekwondo: Defend yourself
+                            </div>
+                            <div id="header2">
+                                <button id="togglebutton" class="btn-toggle-red" onclick="togglebutton();">S1</button>
+                            </div>
+                        </div>
+                        <!-- DIV 2  -->
+                        <div id="main-title">
+                            <div id="mainbox1">
+                                <div id="mainbox1-title">
+                                    
+                                </div>
+                                <div id="mainbox1-content">
+                                    
+                                </div>
+                            </div>
+                            <div id="mainbox2">
+                                <span id="title-1"></span>
+                                <span id="title-2"></span>
+                            </div>
+
+                            <div id="mainbox3">
+                                <div id="mainbox3-title">
+                                    
+                                </div>
+                                <div id="mainbox3-content">
+                                
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- DIV 3  -->
+
+                        <div id="button-menu">
+                            <div id="lowerbox-left">
+                                
+                            </div>
+
+                            <div id="lowerbox-middle">
+                                <input onclick="ExpandHeight()" onmouseover="ExpandHeight()" id="nickname-input" type="text" placeholder="Enter a Nickname...">
+
+                                <div id="call-to-action" onclick="nextScreen()">
+                                    <span>LETS GET STARTED!</span>
+                                </div>
+
+                                <div id="nickname_alert">
+
+                                </div>
+                            </div>
+
+                            <div id="lowerbox-right">
+                                
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div id="ipad-bottom" onclick="screenOn()">
+                    <div class="cirrcle">
+                    <div id="ipad-button">
+                        <div id="ipad-square"></div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="app.js"></script>
+    </body>
+</html>
