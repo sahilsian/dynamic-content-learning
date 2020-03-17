@@ -222,58 +222,6 @@ div#header-container {
     height: 100%;
 }
 
-
-.content1-left {
-    float: left;
-    width: 50%;
-    text-align: center;
-}
-    
-
-    
-.content1-right {
-    float: right;
-    width: 50%;
-    text-align: center;
-}
-    
-    
-.contents1-textbox {
-    background-color: navy;
-    color: white;
-    text-align: center;
-    font-size: large;
-    border-radius: 30px;
-    height: 40px;
-    margin:auto;
-    width:70%;
-    padding:10px;
-    }
-    
-.contents1-textbox-label {
-   vertical-align:middle;
-}
-    
-.contents1-image {
-    padding: 20px;
-    margin-left: 130px;
-    width: auto;
-    height: auto;
-}
-    
-img{
-    height: 300px;
-}
-    
-.subject-section {
-    height: 60px;
-    width: 100%;
-    /* background-color: black; */
-    color: white;
-    text-align: center;
-    font-size: xx-large;
-    padding: 10px;}
-
 #mainbox1-content {
     background-color: #F2F2BC;
     flex: 3;
