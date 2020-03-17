@@ -156,6 +156,7 @@ body {
     border-radius: 20px;
     text-align: center;
     transition: width 3s;
+    display: flex;
 }
 
 #call-to-action {
@@ -275,7 +276,7 @@ body {
     width: 100%;
     height: 100%;
     flex: 1;
-    display: flex;
+    display: none;
     flex-direction: column;
     background-color: #dfdfdf;
 }

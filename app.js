@@ -16,13 +16,14 @@ var game_running = false;
 
 var PageInfo = {
     "page1" : {
-        "title" : "TAEKWONDO LOGIC:",
+        "title1" : "TAEKWONDO LOGIC:",
         "title2" : "defend yourself",
         "direction" : "column"
     },
 
     "page2" : {
-        "title" : ""
+        "title1" : "",
+        "title2" : "",
     }
 }
 
@@ -32,7 +33,7 @@ function screenOn() {
         click_state = true;
         document.querySelector("#ipad-screen").style.display = "flex";
         document.querySelector("#ipad-screen").style.backgroundColor = "white";
-        document.querySelector("#title-1").innerText = PageInfo.page1.title;
+        document.querySelector("#title-1").innerText = PageInfo.page1.title1;
         document.querySelector("#title-2").innerText = PageInfo.page1.title2;
 
     } else {
@@ -46,6 +47,29 @@ function nextScreen() {
 }
 
 
+
+
+function checkInput() {
+    var inputfield = document.getElementById("nickname-input").value;
+
+    if (inputfield === "" && text_state === false) {
+            let alert = document.getElementById("nickname_alert");
+            
+            alert.innerText = "Please enter a Nickname";
+            alert.style.color = "#ff0000";
+            alert.style.position = "sticky";
+            console.log(alert)
+    } else {
+            ipadGrow();
+            game_running = true;
+
+            contentControll();
+            flexController();
+            ChangeButton();
+    }
+}
+
+// CheckInput() Funtions // 
 
 function ipadGrow() {
     var ipadTop = document.getElementById("ipad-top");
@@ -69,24 +93,12 @@ function ipadGrow() {
             screenWrapper.style.height = "100vh";
 }
 
-function checkInput() {
-    var inputfield = document.getElementById("nickname-input").value;
-
-    if (inputfield === "" && text_state === false) {
-            let alert = document.getElementById("nickname_alert");
-            
-            alert.innerText = "Please enter a Nickname";
-            alert.style.color = "#ff0000";
-            alert.style.position = "sticky";
-            console.log(alert)
-    } else {
-            ipadGrow();
-
-            game_running = true;
-            flexController()
-    }
+function contentControll(){
+    document.querySelector("#header-container").style.display = "flex";
+    document.querySelector("#title-1").innerText = PageInfo.page2.title1;
+    document.querySelector("#title-2").innerText = PageInfo.page2.title2;
+    
 }
-
 
 function flexController() {
     var leftFlex = document.querySelector("#mainbox1")
@@ -108,6 +120,21 @@ function flexController() {
 }
 
 
+function ChangeButton(){
+    document.querySelector("#nickname-input").style.display = "none";
+    document.querySelector("#nickname_alert").style.display = "none";
+    var CTAb = document.querySelector("#call-to-action");
+    CTAb.innerText = "NEXT";
+    CTAb.style.animation = "bounce 0s infinite";
+    CTAb.style.height = "100px";
+    CTAb.style.fontSize = "20px";
+    CTAb.style.backgroundColor = "white";
+    CTAb.style.color = "grey";
+    CTAb.style.border = "2px solid grey";
+
+
+}
+// Check Input Funtions End// 
 
  // Button toggle
  function togglebutton() {
