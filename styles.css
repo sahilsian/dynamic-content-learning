@@ -85,6 +85,7 @@ div.flex_Center {
 #ipad-bottom {
     display: flex;
 }
+
 @-webkit-keyframes greenPulse {
     from { -webkit-box-shadow: 0 0 1px #cd2e3a; }
     50% {  -webkit-box-shadow: 0 0 18px #cd2e3a; }
