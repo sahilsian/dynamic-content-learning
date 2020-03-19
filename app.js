@@ -105,18 +105,11 @@ function flexController() {
     var middleFlex = document.querySelector("#mainbox2")
     var rightFlex = document.querySelector("#mainbox3") 
 
-
-    if (middleFlex.style.flex = "50") {
-        middleFlex.style.flex = "1";
-        leftFlex.style.flex = "50";
-        rightFlex.style.flex = "50";
-    } else if (middleFlex.style.flex = "1") {
-        middleFlex.style.flex = "50";
+        leftFlex.style.display = "flex";
         leftFlex.style.flex = "1";
-        rightFlex.style.flex = "1"
-    } else {
-        return null;
-    }  
+        rightFlex.style.display = "flex";
+        rightFlex.style.flex = "1";
+        middleFlex.style.display = "none";
 }
 
 
@@ -126,7 +119,7 @@ function ChangeButton(){
     var CTAb = document.querySelector("#call-to-action");
     CTAb.innerText = "NEXT";
     CTAb.style.animation = "bounce 0s infinite";
-    CTAb.style.height = "100px";
+    CTAb.style.height = "50px";
     CTAb.style.fontSize = "20px";
     CTAb.style.backgroundColor = "white";
     CTAb.style.color = "grey";

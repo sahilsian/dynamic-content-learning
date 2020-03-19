@@ -1,6 +1,7 @@
 body {
     margin: 0;
 }
+
 #screen-wrapper {
     width: 100vw;
     height: 100vh;
@@ -25,34 +26,35 @@ body {
 #ipad-top {
     flex: 0.5;
     border-radius: 50px 0px 0px 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
     background-color: #f4f5f7;
     transition: width 0.5s;
-
 }
+
+/* align contents center  class="flex_Center"*/
+
+div.flex_Center {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /* #f4f5f7 */
 #ipad-screen {
+    justify-content: center;
+    align-items: center;
     background-color: black;  
     display: none;
     transition: backgroundColor 0.5s linear;
     border: 1.5px solid #D5DBDB;
     flex-direction: column;
-    align-items: center;
-    flex-direction: column;
     width: 100%;
     height: 100%;
-    
     /* Transition Fix */
 }
 
 #screen-border {
     flex:3;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     border-top: 20px solid #f4f5f7;
     border-bottom: 20px solid #f4f5f7;
     box-sizing: border-box;
@@ -82,8 +84,6 @@ body {
 
 #ipad-bottom {
     display: flex;
-    justify-content: center;
-    align-items: center;
 }
 @-webkit-keyframes greenPulse {
     from { -webkit-box-shadow: 0 0 1px #cd2e3a; }
@@ -98,9 +98,6 @@ body {
 
 #ipad-button {
     position:absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .cirrcle {
@@ -130,7 +127,7 @@ body {
 #button-menu {
     width:100%;
     display: flex;
-    flex: 1;
+    flex: 0.5;
     background-color: #bcbcbc;
 }
 
@@ -139,10 +136,7 @@ body {
 }
 
 #lowerbox-middle {
-    display: flex;
-    flex: 1;
-    justify-content: center;
-    align-items: center;
+    flex: 2;
     flex-direction: column;
     font-family: 'Noto Sans KR', sans-serif;
 }
@@ -165,9 +159,6 @@ body {
     height: 40px;
     margin: 10px;
     border-radius: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     color: white;
     animation: bounce 2s infinite;
 	-webkit-animation: bounce 2s infinite;
@@ -192,9 +183,7 @@ body {
 
 #main-title {
     background-color: #AAB7B8;
-    display: flex;
-    align-items: center;
-    flex: 3;
+    flex: 5;
     width: 100%;
     font-family: 'Covered By Your Grace', cursive;
     font-weight: bold;
@@ -202,14 +191,14 @@ body {
 }
 
 #mainbox1 {
-    display: flex;
+    display: none;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     flex: 1;
     background-color: #f5f5f5;
     height: 100%;
     transition: flex 0.5s ease;
+    justify-content: center;
+    align-items: centert;
 }
 
 #mainbox1-title {
@@ -217,12 +206,22 @@ body {
     flex: 1;
     width: 100%;
     height: 100%;
+    display:flex;
 }
 
-.content1-left {
-    float: left;
-    width: 50%;
-    text-align: center;
+#mainbox1-content {
+    flex:6;
+    width:100%;
+    height:100%;
+}
+
+#mainbox1-image {
+    background-image: url("https://i.imgur.com/c7YHTx5.png");
+    background-size: contain;
+    width:30em;
+    height:30em;
+    max-width:30em;
+    max-height:30em;
 }
 
 .content1-right {
@@ -282,10 +281,7 @@ img {
 
 
 #mainbox2 {
-    display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     flex: 50;
     background-color: #D8CFBD;
     height: 100%;
@@ -293,14 +289,14 @@ img {
 }
 
 #mainbox3 {
-    display: flex;
+    display: none;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     flex: 1;
     background-color: #A5B0B5;
     height: 100%;
     transition: flex 0.5s ease;
+    justify-content: center;
+    align-items: center;
 }
 
 #mainbox3-title {
@@ -312,10 +308,20 @@ img {
 
 #mainbox3-content {
     background-color: #F2F2BC;
-    flex: 3;
+    flex: 6;
     width: 100%;
     height: 100%;
 }
+
+#mainbox3-image {
+    background-image: url("https://i.imgur.com/c7YHTx5.png");
+    background-size: contain;
+    width:30em;
+    height:30em;
+    max-width:30em;
+    max-height:30em;
+}
+
 
 
 #title-1 {
@@ -339,10 +345,11 @@ img {
     background-color: #A5B0B5;
     width: 100%;
     height: 100%;
-    flex: 1; 
+    flex: 3; 
     color: white;
     text-align: center; 
-    font-size: xx-large;
+    font-size: 50px;
+    font-family: 'Covered By Your Grace', cursive;
 }
 
 #header2 {
