@@ -4,7 +4,7 @@ var game_running = false;
 var slider_state = false;
 var next_state = 0;
 var pageinitiator = 0;
-var totalpage = 0;
+var totalpage = 0; // the number of page
 
 
 //var dataset;
@@ -56,13 +56,7 @@ function nextScreen() {
         flexControllerMid()
         sliderreset()
         pagetotal()
-    } else if (totalpage = 1) {
-
-    
-    }else if (totalpage = 2) {
-
-
-    }else {
+    } else {
     checkInput();
     console.log("pagecounter" + pageinitiator);   
     }
@@ -161,21 +155,6 @@ function ChangeButton(){
 
 
 }
-// Check Input Funtions End// 
-
- // Button toggle
-//  function togglebutton() {
-//     // Button toggle
-//     var btn = document.getElementById("js_slider");
-
-//     if (btn.textContent == "S1") {
-//         btn.textContent = "S2";
-//     }
-//     else {
-//         btn.textContent = "S1";
-//     }
-
-//  }
 
  function slidertoggle() {
     var leftFlex = document.querySelector("#mainbox1");
@@ -247,8 +226,8 @@ function ChangeButton(){
     //TITLES
     var main1title = document.querySelector(".contents1-textbox");
     var main3title = document.querySelector(".contents3-textbox");
-    main1title.style.display = "none";
-    main3title.style.display = "none";
+    main1title.innerText = "";
+    main3title.innerText = "";
     
     console.log(totalpage)
 
