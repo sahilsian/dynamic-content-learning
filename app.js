@@ -3,7 +3,8 @@ var text_state = false;
 var game_running = false;
 var slider_state = false;
 var next_state = 0;
-var pagecounter = 0;
+var pageinitiator = 0;
+var totalpage = 0;
 
 
 //var dataset;
@@ -47,12 +48,16 @@ function screenOn() {
 
 function nextScreen() {
     console.log("im ready")
-    if(pagecounter == 1) {
+    if(pageinitiator >= 1) {
+        pageinitiator = 0;
+        slider_state = false;
+        ChangeButton()
+        imagereset()
         flexControllerMid()
         sliderreset()
     } else {
     checkInput();
-    console.log("pagecounter" + pagecounter);   
+    console.log("pagecounter" + pageinitiator);   
     }
 }
 
@@ -130,8 +135,8 @@ function flexControllerMid() {
         leftFlex.style.flex = "1";
         rightFlex.style.display = "flex";
         rightFlex.style.flex = "1";
-        middleFlex.style.display = "block";
-        middleFlex.style.flex = "50"
+        //middleFlex.style.display = "block";
+        //middleFlex.style.flex = "1"
 }
 
 
@@ -181,16 +186,14 @@ function ChangeButton(){
         buttonSlider.style.justifyContent = "flex-end"
         s1.style.display = "none"
         s2.style.display = "block"
-
+        pageinitiator++
         next_state++
-        pagecounter++
         console.log("nextstate" + next_state)
             if (next_state >= 1) {
                 var CTAb = document.querySelector("#call-to-action");
                 CTAb.style.color = "white"
                 CTAb.style.backgroundColor = "green"
-                pagecounter = 1;
-                console.log("pagecstatus" + pagecounter)
+                console.log("pagecstatus" + pageinitiator)
                 next_state = 0;
             }
         console.log(slider_state);
@@ -206,13 +209,41 @@ function ChangeButton(){
  }
 
  function sliderreset() {
+    var leftFlex = document.querySelector("#mainbox1");
+    var rightFlex = document.querySelector("#mainbox3");
     var s1 = document.querySelector("#s1");
     var s2 = document.querySelector("#s2");
+    var buttonSlider = document.querySelector(".button-section");
 
-    if(s2.style.display === "block") {
+    if(buttonSlider.style.justifyContent === "flex-end") {
         s2.style.display = "none";
+        buttonSlider.style.justifyContent = "flex-start";
         s1.style.display = "block";
+        rightFlex.style.opacity = "20%"
+        leftFlex.style.opacity = "100%"
     } else {
         s1.style.display = "block";
+        buttonSlider.style.justifyContent = "flex-start";
     }
+ }
+
+ function imagereset() {;
+
+    //IMAGES
+    var main1img = document.querySelector("#mainbox1-image")
+    //var main2img = document.querySelector("a#mainbox2-image")
+    var main3img = document.querySelector("#mainbox3-image");
+
+    main1img.style.backgroundImage = "none";
+    main3img.style.backgroundImage = "none";
+
+    //TITLES
+    var main1title = document.querySelector(".contents1-textbox");
+    var main3title = document.querySelector(".contents3-textbox");
+    main1title.style.display = "none";
+    main3title.style.display = "none";
+    
+    console.log(totalpage)
+
+    //hi
  }

@@ -246,6 +246,19 @@ div.flex_Center {
     font-size: 22pt;
 }
 
+.contents3-textbox {
+    background-color: navy;
+    color: white;
+    text-align: center;
+    font-size: large;
+    border-radius: 30px;
+    height: 60px;
+    margin:auto;
+    width:70%;
+    padding:10px;
+    font-size: 22pt;
+}
+
 .contents1-textbox-label {
     vertical-align:middle;
 }
@@ -309,6 +322,7 @@ img {
     flex: 1;
     width: 100%;
     height: 100%;
+    display:flex;
 }
 
 #mainbox3-content {
@@ -316,6 +330,7 @@ img {
     flex: 6;
     width: 100%;
     height: 100%;
+    
 }
 
 #mainbox3-image {
