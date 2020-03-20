@@ -185,6 +185,13 @@ function ChangeButton(){
                 console.log("pagecstatus" + pageinitiator)
                 next_state = 0;
             }
+            if (next_state >=2) {
+                var CTAb = document.querySelector("#call-to-action");
+                CTAb.style.color = "white"
+                CTAb.style.backgroundColor = "green"
+                console.log("pagecstatus" + pageinitiator)
+                next_state = 0;
+            }
         console.log(slider_state);
     } else {
         slider_state = false;
@@ -230,7 +237,7 @@ function ChangeButton(){
     var main1title = document.querySelector(".contents1-textbox");
     var main3title = document.querySelector(".contents3-textbox");
     main1title.innerText = "People need to learn how to protect themselves";
-    main3title.innerText = "I can use these 3 motions to protect myself";
+    main3title.innerText = "When the kick is flying, I clench my fist and lift it up and block it dowm";
     
     console.log(totalpage)
  }
