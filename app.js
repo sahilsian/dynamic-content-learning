@@ -1,6 +1,9 @@
 var click_state = false;
 var text_state = false;
 var game_running = false;
+var slider_state = false;
+var next_state = 0;
+var pagecounter = 0;
 
 
 //var dataset;
@@ -43,7 +46,14 @@ function screenOn() {
 
 
 function nextScreen() {
+    console.log("im ready")
+    if(pagecounter == 1) {
+        flexControllerMid()
+        sliderreset()
+    } else {
     checkInput();
+    console.log("pagecounter" + pagecounter);   
+    }
 }
 
 
@@ -111,6 +121,18 @@ function flexController() {
         rightFlex.style.flex = "1";
         middleFlex.style.display = "none";
 }
+function flexControllerMid() {
+    var leftFlex = document.querySelector("#mainbox1")
+    var middleFlex = document.querySelector("#mainbox2")
+    var rightFlex = document.querySelector("#mainbox3") 
+
+        leftFlex.style.display = "flex";
+        leftFlex.style.flex = "1";
+        rightFlex.style.display = "flex";
+        rightFlex.style.flex = "1";
+        middleFlex.style.display = "block";
+        middleFlex.style.flex = "50"
+}
 
 
 function ChangeButton(){
@@ -130,17 +152,67 @@ function ChangeButton(){
 // Check Input Funtions End// 
 
  // Button toggle
- function togglebutton() {
-    // Button toggle
-    var btn = document.getElementById("togglebutton");
+//  function togglebutton() {
+//     // Button toggle
+//     var btn = document.getElementById("js_slider");
 
-    btn.classList.toggle('btn-toggle-white');
+//     if (btn.textContent == "S1") {
+//         btn.textContent = "S2";
+//     }
+//     else {
+//         btn.textContent = "S1";
+//     }
 
-    if (btn.textContent == "S1") {
-        btn.textContent = "S2";
+//  }
+
+ function slidertoggle() {
+    var leftFlex = document.querySelector("#mainbox1");
+    var rightFlex = document.querySelector("#mainbox3");
+    var mainButton = document.querySelector("#slider-button");
+    var buttonSlider = document.querySelector(".button-section");
+    var s1 = document.querySelector("#s1");
+    var s2 = document.querySelector("#s2");
+   
+
+    if (slider_state === false) {
+        slider_state = true;
+        leftFlex.style.opacity = "20%"
+        rightFlex.style.opacity = "100%"
+        buttonSlider.style.justifyContent = "flex-end"
+        s1.style.display = "none"
+        s2.style.display = "block"
+
+        next_state++
+        pagecounter++
+        console.log("nextstate" + next_state)
+            if (next_state >= 1) {
+                var CTAb = document.querySelector("#call-to-action");
+                CTAb.style.color = "white"
+                CTAb.style.backgroundColor = "green"
+                pagecounter = 1;
+                console.log("pagecstatus" + pagecounter)
+                next_state = 0;
+            }
+        console.log(slider_state);
+    } else {
+        slider_state = false;
+        rightFlex.style.opacity = "20%"
+        leftFlex.style.opacity = "100%"
+        console.log(slider_state);
+        buttonSlider.style.justifyContent = "flex-start"
+        s2.style.display = "none"
+        s1.style.display = "block"
     }
-    else {
-        btn.textContent = "S1";
-    }
+ }
 
+ function sliderreset() {
+    var s1 = document.querySelector("#s1");
+    var s2 = document.querySelector("#s2");
+
+    if(s2.style.display === "block") {
+        s2.style.display = "none";
+        s1.style.display = "block";
+    } else {
+        s1.style.display = "block";
+    }
  }

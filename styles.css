@@ -200,6 +200,7 @@ div.flex_Center {
     transition: flex 0.5s ease;
     justify-content: center;
     align-items: centert;
+    opacity: 100%;
 }
 
 #mainbox1-title {
@@ -238,10 +239,11 @@ div.flex_Center {
     text-align: center;
     font-size: large;
     border-radius: 30px;
-    height: 40px;
+    height: 60px;
     margin:auto;
     width:70%;
     padding:10px;
+    font-size: 22pt;
 }
 
 .contents1-textbox-label {
@@ -287,6 +289,7 @@ img {
     background-color: #D8CFBD;
     height: 100%;
     transition: flex 0.52s ease;
+    
 }
 
 #mainbox3 {
@@ -298,6 +301,7 @@ img {
     transition: flex 0.5s ease;
     justify-content: center;
     align-items: center;
+    opacity: 20%;
 }
 
 #mainbox3-title {
@@ -443,7 +447,7 @@ img {
     text-align:center;
 }
 
-.switch {
+/* .switch {
     position: relative;
     display: inline-block;
     width: 90px;
@@ -515,9 +519,40 @@ img {
   
   
 /* Rounded sliders */
-  .slider.round {
+  /* .slider.round {
     border-radius: 34px;
   }
   
   .slider.round:before {
-    border-radius: 50%;}
+    border-radius: 50%;
+} */
+
+#slider-button {
+    background-color: #C1281B;
+    width: 50%;
+    height: 100%;
+    border-radius: 20px 20px 20px 20px;
+    transition: justify content 0.3s ease;
+}
+
+.button-section {
+    background-color: white;
+    width: 20%;
+    height: 100%;
+    border-radius: 20px 20px 20px 20px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+#s1 {
+    display: block;
+}
+
+#s2 {
+    display: none;
+}
+
+.s {
+    color: white;
+    font-size: 16pt;
+}
