@@ -3,7 +3,8 @@ var text_state = false;
 var game_running = false;
 var slider_state = false;
 var next_state = 0;
-var pagecounter = 0;
+var pageinitiator = 0;
+var totalpage = 0;
 
 
 //var dataset;
@@ -47,7 +48,8 @@ function screenOn() {
 
 function nextScreen() {
     console.log("im ready")
-    if(pagecounter == 1) {
+    if(pageinitiator >= 1) {
+        pageinitiator = 0;
         slider_state = false;
         ChangeButton()
         imagereset()
@@ -55,7 +57,7 @@ function nextScreen() {
         sliderreset()
     } else {
     checkInput();
-    console.log("pagecounter" + pagecounter);   
+    console.log("pagecounter" + pageinitiator);   
     }
 }
 
@@ -184,16 +186,14 @@ function ChangeButton(){
         buttonSlider.style.justifyContent = "flex-end"
         s1.style.display = "none"
         s2.style.display = "block"
-
+        pageinitiator++
         next_state++
-        pagecounter++
         console.log("nextstate" + next_state)
             if (next_state >= 1) {
                 var CTAb = document.querySelector("#call-to-action");
                 CTAb.style.color = "white"
                 CTAb.style.backgroundColor = "green"
-                pagecounter = 1;
-                console.log("pagecstatus" + pagecounter)
+                console.log("pagecstatus" + pageinitiator)
                 next_state = 0;
             }
         console.log(slider_state);
@@ -239,6 +239,10 @@ function ChangeButton(){
 
     //TITLES
     var main1title = document.querySelector(".contents1-textbox");
+    var main3title = document.querySelector(".contents3-textbox");
     main1title.style.display = "none";
+    main3title.style.display = "none";
+    totalpage++
+    console.log(totalpage)
 
  }
