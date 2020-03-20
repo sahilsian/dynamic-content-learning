@@ -179,29 +179,40 @@ function ChangeButton(){
     var s2 = document.querySelector("#s2");
     var buttonSlider = document.querySelector(".button-section");
 
-    if(buttonSlider.style.justifyContent === "flex-end") {
+    if (buttonSlider.style.justifyContent === "flex-end") {
         s2.style.display = "none";
         buttonSlider.style.justifyContent = "flex-start";
         s1.style.display = "block";
-        rightFlex.style.opacity = "20%"
         leftFlex.style.opacity = "100%"
+        
+            if (totalpage < 4) {
+            rightFlex.style.opacity = "20";
+            } else {
+            rightFlex.style.opacity = "100%"
+            }
     } else {
         s1.style.display = "block";
         buttonSlider.style.justifyContent = "flex-start";
     }
+
  }
 
  
 
- function imagereset(n) {
-     n = totalpage;
+ function imagereset() {
      var deduc = document.querySelector(".contents1-textbox-label");
      var induc = document.querySelector(".contents3-textbox-label");
-if (totalpage === 2) { //page 2 statement 1
+if (totalpage === 2) { //page 2 statement 2
     deduc.innerText = "page2_D_statement2";
     induc.innerText = "page2_I_statement2";
-} else if (totalpage === 3) { // page 3 statement2 
+} else if (totalpage === 3) { // page 3 conclusion 
     deduc.innerText = "page3_D_con";
     induc.innerText = "page3_I_con";
+ } else if (totalpage === 4) { // page4 quiz
+    document.querySelector("#contents1_textbox").style.display = "none";
+    document.querySelector("#contents3_textbox").style.display = "none";
+    document.querySelector("#mainbox3-image").style.display = "none";
+    document.querySelector("#quizwrapper").style.display = "flex";
+ } 
  }
- }
+
