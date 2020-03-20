@@ -55,7 +55,14 @@ function nextScreen() {
         imagereset()
         flexControllerMid()
         sliderreset()
-    } else {
+        pagetotal()
+    } else if (totalpage = 1) {
+
+    
+    }else if (totalpage = 2) {
+
+
+    }else {
     checkInput();
     console.log("pagecounter" + pageinitiator);   
     }
@@ -246,4 +253,8 @@ function ChangeButton(){
     console.log(totalpage)
 
     //hi
+ }
+
+ function pagetotal() {
+     totalpage++
  }
