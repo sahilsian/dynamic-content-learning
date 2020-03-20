@@ -242,7 +242,8 @@ function ChangeButton(){
     var main3title = document.querySelector(".contents3-textbox");
     main1title.style.display = "none";
     main3title.style.display = "none";
-    totalpage++
+    
     console.log(totalpage)
 
+    //hi
  }
