@@ -226,8 +226,8 @@ function ChangeButton(){
     //TITLES
     var main1title = document.querySelector(".contents1-textbox");
     var main3title = document.querySelector(".contents3-textbox");
-    main1title.innerText = "";
-    main3title.innerText = "";
+    main1title.innerText = "People need to learn how to protect themselves";
+    main3title.innerText = "I can use these 3 motions to protect myself";
     
     console.log(totalpage)
 
