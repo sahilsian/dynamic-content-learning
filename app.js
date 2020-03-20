@@ -7,38 +7,13 @@ var pageinitiator = 0;
 var totalpage = 0; // the number of page
 
 
-//var dataset;
-
-/*fetch("pageinfo.json")
-    .then(response => response.json())
-    .then(data => dataset = data)
-    .then(json => {
-        console.log(json);
-
-        
-    });*/
-
-var PageInfo = {
-    "page1" : {
-        "title1" : "TAEKWONDO LOGIC:",
-        "title2" : "defend yourself",
-        "direction" : "column"
-    },
-
-    "page2" : {
-        "title1" : "",
-        "title2" : "",
-    }
-}
-
-
 function screenOn() {
     if (click_state === false){
         click_state = true;
         document.querySelector("#ipad-screen").style.display = "flex";
         document.querySelector("#ipad-screen").style.backgroundColor = "white";
-        document.querySelector("#title-1").innerText = PageInfo.page1.title1;
-        document.querySelector("#title-2").innerText = PageInfo.page1.title2;
+        document.querySelector("#title-1").innerText = "TAEKWONDO LOGIC:";
+        document.querySelector("#title-2").innerText = "defend yourself";
 
     } else {
         click_state = true;
@@ -61,7 +36,7 @@ function nextScreen() {
     checkInput();
     totalpage++
     console.log("pagecounter" + pageinitiator);  
-    console.log(totalpage); 
+    console.log("totalpage is " + totalpage); 
     }
 }
 
@@ -114,8 +89,8 @@ function ipadGrow() {
 
 function contentControll(){
     document.querySelector("#header-container").style.display = "flex";
-    document.querySelector("#title-1").innerText = PageInfo.page2.title1;
-    document.querySelector("#title-2").innerText = PageInfo.page2.title2;
+    document.querySelector("#title-1").innerText = "";
+    document.querySelector("#title-2").innerText = "";
     
 }
 
@@ -216,21 +191,16 @@ function ChangeButton(){
     }
  }
 
- function imagereset() {;
 
-    //IMAGES
-    var main1img = document.querySelector("#mainbox1-image")
-    //var main2img = document.querySelector("a#mainbox2-image")
-    var main3img = document.querySelector("#mainbox3-image");
-
-    main1img.style.backgroundImage = "none";
-    main3img.style.backgroundImage = "none";
-
-    //TITLES
-    var main1title = document.querySelector(".contents1-textbox");
-    var main3title = document.querySelector(".contents3-textbox");
-    main1title.innerText = "";
-    main3title.innerText = "";
-    
-    console.log(totalpage)
+ function imagereset(n) {
+     n = totalpage;
+     var deduc = document.querySelector(".contents1-textbox-label");
+     var induc = document.querySelector(".contents3-textbox-label");
+if (totalpage === 2) { //page 2 statement 1
+    deduc.innerText = "page2_D_statement2";
+    induc.innerText = "page2_I_statement2";
+} else if (totalpage === 3) { // page 3 statement2 
+    deduc.innerText = "page3_D_con";
+    induc.innerText = "page3_I_con";
+ }
  }
