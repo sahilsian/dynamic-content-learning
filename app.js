@@ -48,6 +48,9 @@ function screenOn() {
 function nextScreen() {
     console.log("im ready")
     if(pagecounter == 1) {
+        slider_state = false;
+        ChangeButton()
+        imagereset()
         flexControllerMid()
         sliderreset()
     } else {
@@ -130,8 +133,8 @@ function flexControllerMid() {
         leftFlex.style.flex = "1";
         rightFlex.style.display = "flex";
         rightFlex.style.flex = "1";
-        middleFlex.style.display = "block";
-        middleFlex.style.flex = "50"
+        //middleFlex.style.display = "block";
+        //middleFlex.style.flex = "1"
 }
 
 
@@ -206,13 +209,36 @@ function ChangeButton(){
  }
 
  function sliderreset() {
+    var leftFlex = document.querySelector("#mainbox1");
+    var rightFlex = document.querySelector("#mainbox3");
     var s1 = document.querySelector("#s1");
     var s2 = document.querySelector("#s2");
+    var buttonSlider = document.querySelector(".button-section");
 
-    if(s2.style.display === "block") {
+    if(buttonSlider.style.justifyContent === "flex-end") {
         s2.style.display = "none";
+        buttonSlider.style.justifyContent = "flex-start";
         s1.style.display = "block";
+        rightFlex.style.opacity = "20%"
+        leftFlex.style.opacity = "100%"
     } else {
         s1.style.display = "block";
+        buttonSlider.style.justifyContent = "flex-start";
     }
+ }
+
+ function imagereset() {;
+
+    //IMAGES
+    var main1img = document.querySelector("#mainbox1-image")
+    //var main2img = document.querySelector("a#mainbox2-image")
+    var main3img = document.querySelector("#mainbox3-image");
+
+    main1img.style.backgroundImage = "none";
+    main3img.style.backgroundImage = "none";
+
+    //TITLES
+    var main1title = document.querySelector(".contents1-textbox");
+    main1title.style.display = "none";
+
  }
