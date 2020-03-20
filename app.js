@@ -47,18 +47,21 @@ function screenOn() {
 
 
 function nextScreen() {
-    console.log("im ready")
+    console.log("im ready");
     if(pageinitiator >= 1) {
         pageinitiator = 0;
         slider_state = false;
+        totalpage++;
+        console.log(totalpage);
         ChangeButton()
         imagereset()
         flexControllerMid()
         sliderreset()
-        pagetotal()
     } else {
     checkInput();
-    console.log("pagecounter" + pageinitiator);   
+    totalpage++
+    console.log("pagecounter" + pageinitiator);  
+    console.log(totalpage); 
     }
 }
 
@@ -230,10 +233,4 @@ function ChangeButton(){
     main3title.innerText = "";
     
     console.log(totalpage)
-
-    //hi
- }
-
- function pagetotal() {
-     totalpage++
  }
