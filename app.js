@@ -160,13 +160,6 @@ function ChangeButton(){
                 console.log("pagecstatus" + pageinitiator)
                 next_state = 0;
             }
-            if (next_state >=2) {
-                var CTAb = document.querySelector("#call-to-action");
-                CTAb.style.color = "white"
-                CTAb.style.backgroundColor = "green"
-                console.log("pagecstatus" + pageinitiator)
-                next_state = 0;
-            }
         console.log(slider_state);
     } else {
         slider_state = false;
@@ -200,8 +193,8 @@ function ChangeButton(){
 
  
 
-
- function imagereset() {
+ function imagereset(n) {
+     n = totalpage;
      var deduc = document.querySelector(".contents1-textbox-label");
      var induc = document.querySelector(".contents3-textbox-label");
 if (totalpage === 2) { //page 2 statement 1
@@ -210,20 +203,5 @@ if (totalpage === 2) { //page 2 statement 1
 } else if (totalpage === 3) { // page 3 statement2 
     deduc.innerText = "page3_D_con";
     induc.innerText = "page3_I_con";
-    //IMAGES
-    var main1img = document.querySelector("#mainbox1-image")
-    //var main2img = document.querySelector("a#mainbox2-image")
-    var main3img = document.querySelector("#mainbox3-image");
-
-    main1img.style.backgroundImage = "none";
-    main3img.style.backgroundImage = "none";
-
-    //TITLES
-    var main1title = document.querySelector(".contents1-textbox");
-    var main3title = document.querySelector(".contents3-textbox");
-    main1title.innerText = "People need to learn how to protect themselves";
-    main3title.innerText = "When the kick is flying, I clench my fist and lift it up and block it dowm";
-    
-    console.log(totalpage)
  }
  }
