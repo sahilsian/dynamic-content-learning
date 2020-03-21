@@ -158,6 +158,7 @@ function ChangeButton(){
    
 
     if (slider_state === false) {
+        mainButton.style.backgroundColor = "#0047a0";
         slider_state = true;
         leftFlex.style.opacity = "20%"
         rightFlex.style.opacity = "100%"
@@ -176,6 +177,7 @@ function ChangeButton(){
             }
         console.log(slider_state);
     } else {
+        mainButton.style.backgroundColor = "#C1281B";
         slider_state = false;
         rightFlex.style.opacity = "20%"
         leftFlex.style.opacity = "100%"
@@ -232,15 +234,16 @@ if (totalpage === 2) { //page 2 statement 2
  } 
  }
 
- var q1_state;
-function CheckAnswer1() {
-    q1_state = true;
+function CheckAnswer1(){
         document.querySelector("#quiz-question-text").innerText = "explain why it's not true";
+        document.querySelector("#quiz-choice-2").style.backgroundColor = "white";
+        document.querySelector("#quiz-choice-1").style.backgroundColor = "gray";
     }
 
 function CheckAnswer2() {
-    q1_state = false;
          document.querySelector("#quiz-question-text").innerText = "explain why its correct";
+         document.querySelector("#quiz-choice-1").style.backgroundColor = "white";
+         document.querySelector("#quiz-choice-2").style.backgroundColor = "gray";
          QuizMode();
             }
 
@@ -271,12 +274,8 @@ function CheckAnswer4() {
     document.querySelector("#call-to-action").style.backgroundColor = "green";
     document.querySelector("#call-to-action").style.color = "white";
     document.querySelector("#call-to-action").innerText = "Try Again";
-    document.getElementById("call-to-action").onclick = TryAgain;
 }
 
-function TryAgain(){
-
-}
 
 /*
     var deducQ = document.querySelector("#quiz-question-text");
