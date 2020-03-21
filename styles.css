@@ -165,6 +165,17 @@ div.flex_Center {
 	-webkit-animation: bounce 2s infinite;
 }
 
+#quizbutton {
+    background-color: #0047a0;
+    width: 50%;
+    height: 40px;
+    margin: 10px;
+    border-radius: 20px;
+    color: white;
+    animation: bounce 2s infinite;
+	-webkit-animation: bounce 2s infinite;
+
+}
  
 @-webkit-keyframes bounce {
 	0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0);}	

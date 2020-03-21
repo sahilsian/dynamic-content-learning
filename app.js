@@ -27,17 +27,9 @@ function screenOn() {
 
 
 function nextScreen() {
+
     console.log("im ready"); 
-    
-    if (right === 2) {
-        document.querySelector("#quiz-question-name").innerText = "Question2";
-        document.querySelector("#quiz-question-text").innerText = "Question2 isaflaselfjalf";
-
-        var CTAb = document.querySelector("#call-to-action");
-        CTAb.style.color = "grey";
-        CTAb.style.backgroundColor = "white";
-
-    } else if(totalpage === 4) {
+    if(totalpage === 4) {
         
         var CTAb = document.querySelector("#call-to-action");
         CTAb.style.color = "white";
@@ -60,6 +52,7 @@ function nextScreen() {
     right++
     }
 }
+
 
 
 
@@ -229,6 +222,7 @@ if (totalpage === 2) { //page 2 statement 2
 } else if (totalpage === 3) { // page 3 conclusion 
     deduc.innerText = "I can use these 3 motions to protect myself";
     induc.innerText = "We can protect ourselves from dangerous situations of accidents by learning Taekwondo";
+    
  } else if (totalpage === 4) { // page4 quiz
     document.querySelector("#contents1_textbox").style.display = "none";
     document.querySelector("#contents3_textbox").style.display = "none";
@@ -247,11 +241,44 @@ function CheckAnswer1() {
 function CheckAnswer2() {
     q1_state = false;
          document.querySelector("#quiz-question-text").innerText = "explain why its correct";
-         nextScreen();
-         right++;
+         QuizMode();
             }
 
+function QuizMode(){
+    document.querySelector("#call-to-action").style.backgroundColor = "green";
+    document.querySelector("#call-to-action").style.color = "white";
+    document.querySelector("#call-to-action").innerText = "Try another quiz";
+    document.getElementById("call-to-action").onclick = LastQuiz;
+}
 
+function LastQuiz(){
+    document.querySelector("#call-to-action").style.backgroundColor = "white";
+    document.querySelector("#call-to-action").style.color = "grey";
+    document.querySelector("#call-to-action").innerText = "Last Quiz";
+    document.querySelector("#quiz-question-name").innerText = "Question2";
+    document.querySelector("#quiz-question").innerText = "Question2's question is here";
+    document.getElementById("quiz-choice-1").onclick = CheckAnswer3;
+    document.getElementById("quiz-choice-2").onclick = CheckAnswer4;
+
+}
+
+function CheckAnswer3() {
+    document.querySelector("#quiz-question-text").innerText = "explain why it's correct";
+}
+
+function CheckAnswer4() {
+    document.querySelector("#quiz-question-text").innerText = "explain why it's incorrect";
+    document.querySelector("#call-to-action").style.backgroundColor = "green";
+    document.querySelector("#call-to-action").style.color = "white";
+    document.querySelector("#call-to-action").innerText = "Try Again";
+    document.getElementById("call-to-action").onclick = TryAgain;
+}
+
+function TryAgain(){
+
+}
+
+/*
     var deducQ = document.querySelector("#quiz-question-text");
     if (totalpage === 4) {
         deducQ.innerText = "wefslkvfksflsnlfnsknfksnfnksfslf"
@@ -259,4 +286,4 @@ function CheckAnswer2() {
     document.querySelector("#quiz-choice-1").style.display = "block";
     document.querySelector("#quiz-choice-2").style.display = "flex";
 
-}
+}*/
