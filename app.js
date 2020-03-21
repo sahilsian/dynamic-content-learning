@@ -27,7 +27,15 @@ function screenOn() {
 
 function nextScreen() {
     console.log("im ready");
-    if(pageinitiator >= 1) {
+
+    if(totalpage === 4) {
+        
+        var CTAb = document.querySelector("#call-to-action");
+        CTAb.style.color = "white"
+        CTAb.style.backgroundColor = "green"
+
+
+    } else if(pageinitiator >= 1) {
         pageinitiator = 0;
         slider_state = false;
         totalpage++;
@@ -230,6 +238,7 @@ function CheckAnswer1() {
 function CheckAnswer2() {
     q1_state = false;
          document.querySelector("#quiz-question-text").innerText = "explain why its correct";
+         nextScreen()
             }
 
 
