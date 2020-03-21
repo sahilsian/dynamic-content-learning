@@ -250,18 +250,20 @@ function CheckAnswer2() {
 function QuizMode(){
     document.querySelector("#call-to-action").style.backgroundColor = "green";
     document.querySelector("#call-to-action").style.color = "white";
-    document.querySelector("#call-to-action").innerText = "Try another quiz";
+    document.querySelector("#call-to-action").innerText = "Play Again?";
     document.getElementById("call-to-action").onclick = LastQuiz;
 }
 
 function LastQuiz(){
-    document.querySelector("#call-to-action").style.backgroundColor = "white";
-    document.querySelector("#call-to-action").style.color = "grey";
-    document.querySelector("#call-to-action").innerText = "Last Quiz";
-    document.querySelector("#quiz-question-name").innerText = "Question2";
-    document.querySelector("#quiz-question").innerText = "Question2's question is here";
-    document.getElementById("quiz-choice-1").onclick = CheckAnswer3;
-    document.getElementById("quiz-choice-2").onclick = CheckAnswer4;
+    location.reload();
+    return false;
+    // document.querySelector("#call-to-action").style.backgroundColor = "white";
+    // document.querySelector("#call-to-action").style.color = "grey";
+    // document.querySelector("#call-to-action").innerText = "Last Quiz";
+    // document.querySelector("#quiz-question-name").innerText = "Question2";
+    // document.querySelector("#quiz-question").innerText = "Question2's question is here";
+    // document.getElementById("quiz-choice-1").onclick = CheckAnswer3;
+    // document.getElementById("quiz-choice-2").onclick = CheckAnswer4;
 
 }
 
