@@ -5,6 +5,7 @@ var slider_state = false;
 var next_state = 0;
 var pageinitiator = 0;
 var totalpage = 0; // the number of page
+var right = 0;
 
 
 var quiz_true = false;
@@ -26,14 +27,21 @@ function screenOn() {
 
 
 function nextScreen() {
-    console.log("im ready");
+    console.log("im ready"); 
+    
+    if (right === 2) {
+        document.querySelector("#quiz-question-name").innerText = "Question2";
+        document.querySelector("#quiz-question-text").innerText = "Question2 isaflaselfjalf";
 
-    if(totalpage === 4) {
+        var CTAb = document.querySelector("#call-to-action");
+        CTAb.style.color = "grey";
+        CTAb.style.backgroundColor = "white";
+
+    } else if(totalpage === 4) {
         
         var CTAb = document.querySelector("#call-to-action");
-        CTAb.style.color = "white"
-        CTAb.style.backgroundColor = "green"
-
+        CTAb.style.color = "white";
+        CTAb.style.backgroundColor = "green";
 
     } else if(pageinitiator >= 1) {
         pageinitiator = 0;
@@ -48,7 +56,8 @@ function nextScreen() {
     checkInput();
     totalpage++
     console.log("pagecounter" + pageinitiator);  
-    console.log("totalpage is " + totalpage); 
+    console.log("totalpage is " + totalpage);
+    right++
     }
 }
 
@@ -238,7 +247,8 @@ function CheckAnswer1() {
 function CheckAnswer2() {
     q1_state = false;
          document.querySelector("#quiz-question-text").innerText = "explain why its correct";
-         nextScreen()
+         nextScreen();
+         right++;
             }
 
 
