@@ -74,7 +74,7 @@ function checkInput() {
             contentControll();
             flexController();
             ChangeButton();
-            document.querySelector("#welcome-span").innerText = "Welcome, " + inputfield + " !";
+            document.querySelector("#welcome-span").innerText = "Now Playing As: " + inputfield;
     }
 }
 
@@ -221,30 +221,37 @@ function ChangeButton(){
      var induc = document.querySelector(".contents3-textbox-label");
 if (totalpage === 2) { //page 2 statement 2
     deduc.innerText = " People need to learn how to protect themselves";
-    induc.innerText = "When the kick is flying, I clench my fist and lift it up and block it down";
+    induc.innerText = "When the Kick it towards my head, I can clench my fits and block my head";
+    document.querySelector("#mainbox1-image").style.backgroundImage = "url(" + "'https://www.wikihow.com/images/thumb/d/d2/Do-Taekwondo-Step-17.jpg/v4-460px-Do-Taekwondo-Step-17.jpg'" + ")";
+    document.querySelector("#mainbox3-image").style.backgroundImage = "url(" + "'https://www.wikihow.com/images/thumb/e/e0/Do-Taekwondo-Step-18.jpg/v4-460px-Do-Taekwondo-Step-18.jpg'" + ")";
 } else if (totalpage === 3) { // page 3 conclusion 
-    deduc.innerText = "I can use these 3 motions to protect myself";
-    induc.innerText = "We can protect ourselves from dangerous situations of accidents by learning Taekwondo";
-    
+    deduc.innerText = "Therefore, I can use these 3 motions to protect myself";
+    induc.innerText = "Therefore, We can protect ourselves from dangerous situations of accidents by learning Taekwondo";
+    document.querySelector("#mainbox1-image").style.backgroundImage = "url(" + "'https://www.wikihow.com/images/thumb/2/2a/Do-Taekwondo-Step-19.jpg/v4-460px-Do-Taekwondo-Step-19.jpg'" + ")";
+    document.querySelector("#mainbox3-image").style.backgroundImage = "url(" + "'https://www.wikihow.com/images/thumb/f/f0/Do-Taekwondo-Step-3.jpg/v4-460px-Do-Taekwondo-Step-3.jpg'" + ")";
+    document.querySelector("#call-to-action").innerText = "Lets Test!";
  } else if (totalpage === 4) { // page4 quiz
     document.querySelector("#contents1_textbox").style.display = "none";
     document.querySelector("#contents3_textbox").style.display = "none";
     document.querySelector("#mainbox3-image").style.display = "none";
     document.querySelector("#quizwrapper").style.display = "flex";
     document.querySelector("#header2").style.display = "none";
+    document.querySelector("#mainbox1-image").style.backgroundImage = "url(" + "'https://www.wikihow.com/images/thumb/2/24/Do-Taekwondo-Step-16.jpg/aid5775910-v4-728px-Do-Taekwondo-Step-16.jpg'" + ")";
+    document.querySelector("#call-to-action").innerText = "";
+
  } 
  }
 
 function CheckAnswer1(){
         document.querySelector("#quiz-question-text").innerText = "LET'S THINK AGAIN! The basic three motions of Taekwondo is used to protect myself. Teakwondo is not simply used to fight and win against someone.";
         document.querySelector("#quiz-choice-2").style.backgroundColor = "white";
-        document.querySelector("#quiz-choice-1").style.backgroundColor = "gray";
+        document.querySelector("#quiz-choice-1").style.backgroundColor = "#eaeaea";
     }
 
 function CheckAnswer2() {
          document.querySelector("#quiz-question-text").innerText = "YOU GOT IT! Through the basic motions of Taekwondo, we learn how to protect ourselves. These are motions that protect myself, not attacking someone.";
          document.querySelector("#quiz-choice-1").style.backgroundColor = "white";
-         document.querySelector("#quiz-choice-2").style.backgroundColor = "gray";
+         document.querySelector("#quiz-choice-2").style.backgroundColor = "#eaeaea";
          QuizMode();
             }
 
