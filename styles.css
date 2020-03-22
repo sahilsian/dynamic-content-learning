@@ -521,6 +521,8 @@ img {
 #header2 {
     padding: 10px;
     text-align:center;
+    background-color:black;
+
 }
 
 
@@ -561,6 +563,7 @@ img {
 #mainbox1-content {
     text-align: center;
     color:white;
+    background-color:white;
     /* display: block; */
     background-image: linear-gradient(to left, transparent, transparent 50%,  #C1281B 50%, #C1281B );
     background-position: 100% 0;
@@ -581,7 +584,8 @@ img {
 
 #mainbox3-content {
     text-align: center;
-    color:white;
+    background-color:white;
+
     /* display: block; */
     background-image: linear-gradient(to left, transparent, transparent 50%, #0f62c7 50%, #0f62c7 );
     background-position: 100% 0;
