@@ -155,7 +155,7 @@ function ChangeButton(){
     var buttonSlider = document.querySelector(".button-section");
     var s1 = document.querySelector("#s1");
     var s2 = document.querySelector("#s2");
-    
+   
 
     if (slider_state === false) {
         mainButton.style.backgroundColor = "#0047a0";
