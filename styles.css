@@ -154,6 +154,7 @@ div.flex_Center {
     text-align: center;
     transition: width 3s;
     display: flex;
+    margin-top:8%
 }
 
 #call-to-action {
@@ -256,9 +257,9 @@ div.flex_Center {
     color: white;
     font-size: large;
     border-radius: 30px;
-    height: 60px;
+    height: 70%;
     margin:auto;
-    width:70%;
+    width:90%;
     padding:10px;
     font-size: 22pt;
     display : flex;
@@ -268,7 +269,8 @@ div.flex_Center {
 .contents-textbox {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: normal;
-    font-size: 1.2em;
+    font-size: 1.3em;
+    max-height: 90%;
     text-align: center;
     display: flex;
     align-items: center;
@@ -401,12 +403,12 @@ img {
     flex: 3; 
     color: white;
     text-align: center; 
-    font-size: 50px;
     font-family: 'Covered By Your Grace', cursive;
+    flex-direction: column;
 }
 
 
-/* What I changed */
+/* Header gradient */
 
 .gradtext {
     background: #55ffaa;
@@ -417,11 +419,15 @@ img {
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    font-size: 48px;
+    font-size: 4rem;
     font-weight: bold;
+    flex:4;
 }
-/* What I changed */
+/* Header gradient ends */
 
+.welcome_statement {
+    flex:1;
+}
 
 #header2 {
     background-color: #00CCFF;

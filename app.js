@@ -18,7 +18,7 @@ function screenOn() {
         document.querySelector("#ipad-screen").style.display = "flex";
         document.querySelector("#ipad-screen").style.backgroundColor = "white";
         document.querySelector("#title-1").innerText = "TAEKWONDO LOGIC:";
-        document.querySelector("#title-2").innerText = "defend yourself";
+        document.querySelector("#title-2").innerText = "DEFEND YOURSELF";
 
     } else {
         click_state = true;
@@ -74,6 +74,7 @@ function checkInput() {
             contentControll();
             flexController();
             ChangeButton();
+            document.querySelector("#welcome_statement").innerHTML = "Welcome, " + inputfield + " !";
     }
 }
 
@@ -165,7 +166,7 @@ function ChangeButton(){
         buttonSlider.style.justifyContent = "flex-end"
         s1.style.display = "none"
         s2.style.display = "block"
-        pageinitiator+
+        pageinitiator++
         next_state++
         console.log("nextstate" + next_state)
             if (next_state >= 1) {
