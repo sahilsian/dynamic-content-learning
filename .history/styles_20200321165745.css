@@ -130,8 +130,6 @@ div.flex_Center {
     display: flex;
     flex: 0.5;
     background-color: #bcbcbc;
-    /* background-color: #ffffff; */
-    /* border: 1px solid #bcbcbc; */
 }
 
 #lowerbox-left {
@@ -316,8 +314,7 @@ img {
 #mainbox2 {
     flex-direction: column;
     flex: 50;
-    /* background-color: #D8CFBD; */
-    background-color: #ffffff;
+    background-color: #D8CFBD;
     height: 100%;
     transition: flex 0.52s ease;
     
@@ -585,7 +582,7 @@ img {
 /* What I changed */
 
 
-/* What I changed
+/* What I changed */
 .button-menu-grad {
     background-image: linear-gradient(#b92b27, #1565C0); 
-} */
+}

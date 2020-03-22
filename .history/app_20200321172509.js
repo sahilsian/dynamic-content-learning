@@ -235,7 +235,7 @@ if (totalpage === 2) { //page 2 statement 2
  }
 
 function CheckAnswer1(){
-        document.querySelector("#quiz-question-text").innerText = "LET'S THINK AGAIN! The basic three motions of Taekwondo is used to protect myself. Teakwondo is not simply used to fight and win against someone.";
+        document.querySelector("#quiz-question-text").innerText = "The basic three motions of Taekwondo is used to protect myself. Teakwondo is not simply used to fight and win against someone.";
         document.querySelector("#quiz-choice-2").style.backgroundColor = "white";
         document.querySelector("#quiz-choice-1").style.backgroundColor = "gray";
     }

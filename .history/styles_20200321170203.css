@@ -154,6 +154,7 @@ div.flex_Center {
     text-align: center;
     transition: width 3s;
     display: flex;
+    margin: center;
 }
 
 #call-to-action {
