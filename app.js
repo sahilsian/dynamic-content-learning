@@ -74,7 +74,7 @@ function checkInput() {
             contentControll();
             flexController();
             ChangeButton();
-            document.querySelector("#welcome_statement").innerHTML = "Welcome, " + inputfield + " !";
+            document.querySelector("#welcome-span").innerText = "Welcome, " + inputfield + " !";
     }
 }
 
